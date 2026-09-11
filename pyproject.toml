@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepoptics-pytorch"
+version = "0.1.0"
+description = "Diffractive snapshot hyperspectral imaging with PyTorch"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0", "torchvision>=0.15", "numpy>=1.23", "h5py>=3.8",
+    "opencv-python>=4.7", "matplotlib>=3.6", "tensorboard>=2.12", "Pillow>=9.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+deepoptics-train = "deepoptics.train:main"
+
+[tool.setuptools.packages.find]
+include = ["deepoptics*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
