@@ -71,4 +71,10 @@ python -m pytest -q
 
 测试使用合成数据和缩小的光学/网络配置，检查导入无副作用、MAT 读取、评估模式以及 CPU/CUDA 前向反向计算。它们不能替代真实 ICVL 数据的完整训练或论文指标复现。
 
-旧模块位置与兼容性变化见 [迁移说明](docs/MIGRATION.md)。本机已有 MTF 动图归档至 `docs/assets/MTF.gif` 并忽略上传；它不是本次测试结果。
+旧模块位置与兼容性变化见 [迁移说明](docs/MIGRATION.md)。
+
+## MTF 示例
+
+以下为已有实验的 MTF 动图可视化。
+
+![已有实验的 MTF 动图](docs/assets/MTF.gif)
